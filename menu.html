@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Food</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+
+*
+{
+margin: 0;
+padding: 0;
+}
+
+.food
+{
+    background-image: url(2148382871.jpg);
+    background-size: cover;
+    background-position: 5%;
+    width: 100%;
+    height: 500px;
+}
+
+#chinese
+ {
+    padding-bottom: 9px;
+}
+
+.ul
+{
+
+   display: flex ;
+   align-items: center;
+   justify-content: center;
+   padding-top: 20px;
+}
+
+.ul #li
+{
+    display: inline-block;
+}
+
+.ul #li #a
+{
+   text-decoration: none;
+   color: white;
+   font-size: 20px;
+   margin-left: 80px;
+}
+
+.ul #li #a:hover
+{
+     color: #cf9c1e;
+}
+
+i
+{
+    color: white;
+    margin-left: 28px;
+    font-size: 20px;
+    font-weight: 800;
+    opacity: 0.90;
+   
+}
+
+i:hover
+{
+    color: #cf9c1e;
+}
+
+.hamburger
+{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width:768px)
+{
+    .hamburger
+    {
+        display: block;
+    }
+
+    .ul
+    {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: rgba(0,0,0,0.9);
+        padding: 20px 0;
+    }
+
+    .ul.active
+    {
+        display: flex;
+    }
+
+    .ul #li
+    {
+        margin: 15px 0;
+    }
+
+    .ul #li #a
+    {
+        margin-left: 0;
+    }
+
+    #chinese
+    {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width:1024px)
+{
+    .hamburger
+    {
+        display: block;
+    }
+
+    .hamburger i
+    {
+        font-size: 50px;
+    }
+
+    .ul
+    {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: rgba(0,0,0,0.9);
+        padding: 20px 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
+    .ul.active
+    {
+        display: flex;
+    }
+
+    .ul #li
+    {
+        margin: 15px 0;
+    }
+
+    .ul #li #a
+    {
+        margin-left: 0;
+    }
+
+    #chinese
+    {
+        margin-bottom: 20px;
+    }
+
+    .fa-magnifying-glass
+    {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+}
+
+#h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 170px;
+}
+
+.menu1
+{
+    height: 1150px;
+    width: 100%;
+}
+
+#h3
+{
+    color: rgb(212, 146, 32);
+    padding-top: 70px;
+    font-size: 26px;
+    font-weight: 300;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#h2
+{
+    font-size: 50px;
+    font-weight: 300;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#ramen
+{
+    height: 130px;
+    width: 180px;
+    margin-left: 86%;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.image1
+{
+    border: 7px solid #d4363b;
+    border-bottom: 15px solid #d4363b;
+    border-radius: 20px;
+    width: 415px;
+    height: 535px;
+}
+
+#image1
+{
+    height: 530px;
+    width: 410px;
+    border-radius: 20px;
+    margin-left: 3px;
+    padding-top: 2px;
+}
+
+#h5
+{
+    font-size: 30px;
+    font-weight: 300;
+    padding-top: 25px;
+    margin-left: 100px;
+    letter-spacing: 2px;
+}
+
+#p2
+{
+    font-size: 18px;
+    margin-left: 20px;
+    padding-top: 20px;
+    letter-spacing: 0.5px;
+    font-family: arial;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.button1
+{
+    background-color: #cf9c1e;
+    padding: 10px 25px 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 45px;
+    margin-left: 150px;
+}
+
+a .button1:hover
+{
+    background-color: #d4363b;
+    color: white;
+}
+
+#h7
+{
+   font-size: 30px;
+    font-weight: 300;
+    padding-top: 25px;
+    margin-left: 50px;
+    letter-spacing: 2px; 
+}
+
+.image2
+{
+    border: 7px solid #d4363b;
+    border-bottom: 15px solid #d4363b;
+    border-radius: 20px;
+    width: 415px;
+    height: 535px;
+    margin-left: 40px;
+   
+}
+
+#image2
+{
+     height: 530px;
+     width: 410px; 
+     border-radius: 20px;
+     margin-left: 3px;
+     padding-top: 2px;
+}
+
+.black
+{
+    height: 560px;
+    width: 100%;
+    background-color: black;
+}
+
+#hero
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero1
+{
+   padding-top: 40px;
+}
+
+.main-footer
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 40px;
+    margin-right: 110px;
+}
+
+.footer
+{
+    margin-left: 100px;
+    height: 300px;
+    width: 300px;
+}
+
+#h10
+{
+    font-size: 22px;
+    font-weight: bold;
+    font-weight: 300;
+    font-family: arial;
+    color: white;
+    margin-left: 30px;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+}
+
+#i
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: black;
+    font-size: 26px;
+    color: #cf9c1e;
+    border: 2px solid #cf9c1e;
+    padding: 6px;
+    margin-right: -20px;
+}
+
+.footer1
+{
+    margin-left: 70px;
+}
+
+#h11
+{
+    font-size: 22px;
+    font-weight: bold;
+    font-weight: 300;
+    font-family: arial;
+    color: white;
+    margin-left: 30px;
+    letter-spacing: 1px;
+    margin-right: -20px;
+}
+
+.ul1
+{
+    padding-top: 30px;
+    margin-left: 40px;
+    height: 200px;
+}
+
+.ul1 #li1
+{
+    padding-top: 25px;
+}
+
+.ul1 #li1 #a1
+{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-family:Arial, Helvetica, sans-serif;
+    opacity: 0.90;
+}
+
+.footer2
+{
+    margin-left: 130px;
+}
+
+#h12
+{
+    font-size: 22px;
+    font-weight: bold;
+    font-weight: 300;
+    font-family: arial;
+    color: white;
+    margin-left: 30px;
+    letter-spacing: 1px;
+}
+
+.footer3
+{
+    margin-left: 130px;
+
+}
+
+#h13
+{
+    font-size: 22px;
+    font-weight: bold;
+    font-weight: 300;
+    font-family: arial;
+    color: white;
+    margin-left: 30px;
+    letter-spacing: 1px;
+}
+
+#i2
+{
+    font-size: 35px;
+    color: #cf9c1e;
+}
+
+#one
+{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#two
+{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+}
+
+#three
+{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+}
+
+#four
+{
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+
+.ten
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#nine
+{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 500px;
+}
+
+#ten
+{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   LAPTOP (UNCHANGED DESIGN)
+========================= */
+@media screen and (max-width: 1440px)
+{
+    #ramen
+    {
+        margin-left: 75%;
+    }
+
+    .image1, .image2
+    {
+        width: 380px;
+        height: auto;
+    }
+
+    #image1, #image2
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* =========================
+   TABLET (ALL CENTER)
+========================= */
+@media screen and (max-width: 1024px)
+{
+    /* NAV */
+    .ul
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ul #li
+    {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .ul #li #a
+    {
+        margin-left: 0;
+        font-size: 22px;
+    }
+
+    #ramen
+    {
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* HEADINGS CENTER */
+    #h1, #h2, #h3, #h5, #h7, #h10, #h11, #h12, #h13
+    {
+        text-align: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    /* MENU SECTION */
+    .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image1, .image2
+    {
+        margin: 0 auto;
+    }
+
+    #h5, #h7, #p2
+    {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .button1
+    {
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* FOOTER */
+    .main-footer
+    {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .footer,
+    .footer1,
+    .footer2,
+    .footer3
+    {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #nine
+    {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .ten
+    {
+        flex-direction: column;
+    }
+}
+
+/* =========================
+   MOBILE (FULL CENTER FIX)
+========================= */
+@media screen and (max-width: 768px)
+{
+    #h1
+    {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    #h2
+    {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    #h3
+    {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .container
+    {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .image1, .image2
+    {
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #image1, #image2
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    #h5, #h7, #p2
+    {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .button1
+    {
+        display: block;
+        margin: 20px auto;
+    }
+
+    /* FOOTER MOBILE */
+    .black
+    {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .main-footer
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer,
+    .footer1,
+    .footer2,
+    .footer3
+    {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .ul1
+    {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #nine
+    {
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu1
+    {
+        background-color: white;
+        height: 1430px;
+    }
+
+    .ten
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="food">
+
+      <nav>
+        
+       <ul class="ul">
+       <img id="chinese" src="logo.webp" alt="">
+         <li id="li"><a id="a" href="index.html">Home</a></li>
+         <li id="li"><a id="a" href="menu.html">Our Menu</a></li>
+         <li id="li"><a id="a" href="about.html">About Us</a></li>
+         <li id="li"><a id="a" href="Testimonials.html">Testimonials</a></li>
+         <li id="li"><a id="a" href="contact.html">Contact us</a></li>
+         <i class="fa-solid fa-magnifying-glass"></i>
+       </ul> 
+
+        <div class="hamburger" onclick="toggleMenu()">
+         <i class="fa-solid fa-bars"></i>
+       </div>
+
+    </nav>
+
+    <hr>
+
+    <h1 id="h1">Our Menu</h1>
+
+    </div>
+
+    <div class="menu1">
+
+
+      <div class="menu">
+     <h3 id="h3">A CULINARY JOURNEY</h3>
+      <img id="ramen" src="ramen.webp" alt="">
+     <h2 id="h2">Refined flavors, carefully packaged to travel.</h2>
+      </div>
+
+
+      <div class="container">
+        
+     <div class="image1">
+      <img id="image1" src="restaurant.jpg" alt="">
+      <h5 id="h5">Take-away menu</h5>
+      <p id="p2">Enjoy a curated selection of Redwood Gardens signatures at home. Every dish is prepared with the same attention to detail, balanced for delivery and take-away.</p>
+      <a href="#"><button class="button1">Order Now</button></a>
+      </div>
+
+
+      <div class="image2">
+       <img id="image2" src="siting.jpg" alt="">
+       <h5 id="h7">View our dine in menus</h5>
+       <p id="p2">For the dining room, dishes are plated with a restrained, sculptural approach. Choose between multi-course tastings or a seasonal à la carte selection.</p>
+       <a href="#"><button class="button1">Book Now</button></a>
+      </div>
+
+     </div>
+    
+    </div>
+
+    
+<div class="black">
+
+  <div id="hero"><img class="hero1" src="logo.webp" alt=""></div>
+
+  <div class="main-footer">
+  
+   <div class="footer">
+    <h3 id="h10">Follow Us On</h3>
+    <i id="i" class="fa-brands fa-facebook-f"></i>
+    <i id="i" class="fa-brands fa-twitter"></i>
+    <i id="i" class="fa-brands fa-instagram"></i>
+    <i id="i" class="fa-brands fa-linkedin-in"></i>
+   </div>
+
+   <div class="footer1">
+      <h3 id="h11">Quick Links</h3>
+      <ul class="ul1">
+        <li id="li1"><a id="a1" href="index.html">Home</a></li>
+        <li id="li1"><a id="a1" href="menu.html">Menu</a></li>
+        <li id="li1"><a id="a1" href="about.html">About Us</a></li>
+        <li id="li1"><a id="a1" href="Testimonials.html">Testimonials</a></li>
+      </ul>
+    </div>
+
+
+   <div class="footer2">
+    <h3 id="h12">Other Links</h3>
+      <ul class="ul1">
+        <li id="li1"><a id="a1" href="contact.html">Contact Us</a></li>
+        <li id="li1"><a id="a1" href="menu.html">Privacy Policy</a></li>
+        <li id="li1"><a id="a1" href="menu.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer3">
+
+      <h3 id="h13">Contact Info</h3>
+
+      <div id="one">
+      <i id="i2" class="fa-solid fa-location-dot"></i>
+      <p id="four">1/16 GARDEN BOULEVARD, DINGLEY 3172</p>
+      </div>
+
+      <div id="two">
+      <i id="i2" class="fa-solid fa-envelope"></i>
+      <p id="four">patriciang2011@hotmail.com</p>
+      </div>
+
+      <div id="three">
+      <i id="i2" class="fa-solid fa-phone"></i>
+        <p id="four">+0395515643</p>
+        <p id="four">+0420871288</p>
+      </div>
+
+    </div>
+    </div>
+
+<hr>
+
+<div class="ten">
+<p id="nine">© 2025 Redwood Gardens Chinese Restaurant . All rights reserved.</p>
+<p id="ten">Powered by: Synergy Spark Agency</p>
+</div>
+
+</div>
+
+
+<script>
+function toggleMenu()
+{
+    document.querySelector(".ul").classList.toggle("active");
+}
+</script>
+
+    
+</body>
+</html>

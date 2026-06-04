@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        
+*
+{
+margin: 0;
+padding: 0;
+}
+
+.food
+{
+    background-image: url(2148382871.jpg);
+    background-size: cover;
+    background-position: 5%;
+    width: 100%;
+    height: 500px;
+}
+
+#chinese
+ {
+    padding-bottom: 9px;
+}
+
+.ul
+{
+
+   display: flex ;
+   align-items: center;
+   justify-content: center;
+   padding-top: 20px;
+}
+
+.ul #li
+{
+    display: inline-block;
+}
+
+.ul #li #a
+{
+   text-decoration: none;
+   color: white;
+   font-size: 20px;
+   margin-left: 80px;
+}
+
+.ul #li #a:hover
+{
+     color: #cf9c1e;
+}
+
+i
+{
+    color: white;
+    margin-left: 28px;
+    font-size: 20px;
+    font-weight: 800;
+    opacity: 0.90;
+   
+}
+
+i:hover
+{
+    color: #cf9c1e;
+}
+
+.hamburger
+{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width:768px)
+{
+    .hamburger
+    {
+        display: block;
+    }
+
+    .ul
+    {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: rgba(0,0,0,0.9);
+        padding: 20px 0;
+    }
+
+    .ul.active
+    {
+        display: flex;
+    }
+
+    .ul #li
+    {
+        margin: 15px 0;
+    }
+
+    .ul #li #a
+    {
+        margin-left: 0;
+    }
+
+    #chinese
+    {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width:1024px)
+{
+    .hamburger
+    {
+        display: block;
+    }
+
+    .hamburger i
+    {
+        font-size: 50px;
+    }
+
+    .ul
+    {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: rgba(0,0,0,0.9);
+        padding: 20px 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
+    .ul.active
+    {
+        display: flex;
+    }
+
+    .ul #li
+    {
+        margin: 15px 0;
+    }
+
+    .ul #li #a
+    {
+        margin-left: 0;
+    }
+
+    #chinese
+    {
+        margin-bottom: 20px;
+    }
+
+    .fa-magnifying-glass
+    {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+}
+
+#h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 170px;
+    padding-bottom: 170px;
+}
+
+.title
+{
+    height: 900px;
+    width: 100%;
+}
+
+.heading
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bowl img
+{
+    width: 200px;
+    height: 200px;
+}
+
+#p5
+{
+    color: #cf9c1e;
+    font-size: 22px;
+    font-weight: 400;
+    margin-left: 470px;
+    letter-spacing: 1px;
+}
+
+#h8
+{
+    font-size: 45px;
+    font-weight: 400;
+    margin-left: 240px;
+    padding-top: 20px;
+}
+
+.box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+#box1
+{
+    height: 370px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 25px;
+    border-bottom: 8px solid #d4363b;
+}
+
+#box2
+{
+     height: 370px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-left: 50px;
+    border-bottom: 8px solid #d4363b;
+}
+
+#box3
+{
+     height: 370px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-left: 50px;
+    border-bottom: 8px solid #d4363b;
+}
+
+.rating {
+  display: inline-block;
+  margin-left: 30px;
+  padding-top: 10px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.rating label:before {
+  content: "\2605";
+  font-size: 30px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffd700;
+  transition: color 0.3s;
+}
+
+#h9
+{
+    font-size: 20px;
+    font-style: italic;
+    font-family: arial;
+    font-weight: 800;
+    padding-top: 30px;
+    margin-left: 30px;
+}
+
+#p6
+{
+    font-size: 18px;
+    font-family: arial;
+    margin-left: 30px;
+    margin-right: 35px;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+#p7
+{
+    font-size: 19px;
+    font-weight: 400;
+    margin-left: 30px;
+    padding-top: 30px;
+}
+
+.opacity
+{
+    font-size: 19px;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-top: 10px;
+    opacity: 0.50;
+}
+
+.women
+{
+    margin-left: 30px;
+}
+
+#bowl1
+{
+    margin-left: 86%;
+    padding-top: 50px;
+}
+
+.black
+{
+    height: 560px;
+    width: 100%;
+    background-color: black;
+}
+
+#hero
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero1
+{
+   padding-top: 40px;
+}
+
+.main-footer
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 40px;
+    margin-right: 110px;
+}
+
+.footer
+{
+    margin-left: 100px;
+    height: 300px;
+    width: 300px;
+}
+
+#h10
+{
+    font-size: 22px;
+    font-weight: bold;
+    font-weight: 300;
+    font-family: arial;
+    color: white;
+    margin-left: 30px;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+}
+
+#i
+{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: black;
+    font-size: 26px;
+    color: #cf9c1e;
+    border: 2px solid #cf9c1e;
+    padding: 6px;
+    margin-right: -20px;
+}
+
+.footer1
+{
+    margin-left: 70px;
+}
+
+#h11
+{
+    font-size: 22px;
+    font-weight: bold;
+    font-weight: 300;
+    font-family: arial;
+    color: white;
+    margin-left: 30px;
+    letter-spacing: 1px;
+    margin-right: -20px;
+}
+
+.ul1
+{
+    padding-top: 30px;
+    margin-left: 40px;
+    height: 200px;
+}
+
+.ul1 #li1
+{
+    padding-top: 25px;
+}
+
+.ul1 #li1 #a1
+{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    font-family:Arial, Helvetica, sans-serif;
+    opacity: 0.90;
+}
+
+.footer2
+{
+    margin-left: 130px;
+}
+
+#h12
+{
+    font-size: 22px;
+    font-weight: bold;
+    font-weight: 300;
+    font-family: arial;
+    color: white;
+    margin-left: 30px;
+    letter-spacing: 1px;
+}
+
+.footer3
+{
+    margin-left: 130px;
+
+}
+
+#h13
+{
+    font-size: 22px;
+    font-weight: bold;
+    font-weight: 300;
+    font-family: arial;
+    color: white;
+    margin-left: 30px;
+    letter-spacing: 1px;
+}
+
+#i2
+{
+    font-size: 35px;
+    color: #cf9c1e;
+}
+
+#one
+{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#two
+{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+}
+
+#three
+{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+}
+
+#four
+{
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+
+.ten
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#nine
+{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 500px;
+}
+
+#ten
+{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media screen and (max-width: 1440px)
+{
+    #p5
+    {
+        margin-left: 350px;
+    }
+
+    #h8
+    {
+        margin-left: 150px;
+    }
+
+    #bowl1
+    {
+        margin-left: 75%;
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media screen and (max-width: 1024px)
+{
+    .title
+    {
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    .heading
+    {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .bowl img
+    {
+        width: 150px;
+        height: 150px;
+    }
+
+    #p5
+    {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #h8
+    {
+        margin-left: 0;
+        text-align: center;
+        font-size: 38px;
+    }
+
+    .box
+    {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #box1,
+    #box2,
+    #box3
+    {
+        margin-left: 0;
+    }
+
+    #h9,
+    #p6,
+    #p7,
+    .opacity,
+    .women
+    {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rating
+    {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    #bowl1
+    {
+        display: block;
+        margin: 40px auto 0 auto;
+    }
+
+    /* Footer */
+    .black
+    {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .main-footer
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .footer,
+    .footer1,
+    .footer2,
+    .footer3
+    {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #h10,
+    #h11,
+    #h12,
+    #h13
+    {
+        margin-left: 0;
+    }
+
+    .ul1
+    {
+        margin-left: 0;
+    }
+
+    #nine
+    {
+        margin-right: 0;
+    }
+
+    .ten
+    {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    #one,
+    #two,
+    #three
+    {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media screen and (max-width: 768px)
+{
+    #h1
+    {
+        font-size: 32px;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .title
+    {
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .heading
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bowl img
+    {
+        width: 120px;
+        height: 120px;
+    }
+
+    #p5
+    {
+        margin-left: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #h8
+    {
+        margin-left: 0;
+        text-align: center;
+        font-size: 30px;
+        padding: 15px;
+    }
+
+    .box
+    {
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 30px;
+    }
+
+    #box1,
+    #box2,
+    #box3
+    {
+        width: 92%;
+        height: auto;
+        margin-left: 0;
+        padding-bottom: 25px;
+    }
+
+    .rating
+    {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    #h9
+    {
+        text-align: center;
+        margin-left: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #p6
+    {
+        text-align: center;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #p7,
+    .opacity,
+    .women
+    {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    #bowl1
+    {
+        width: 120px;
+        display: block;
+        margin: 30px auto 0 auto;
+    }
+
+    /* Footer Mobile */
+    .black
+    {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .main-footer
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .footer,
+    .footer1,
+    .footer2,
+    .footer3
+    {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #h10,
+    #h11,
+    #h12,
+    #h13
+    {
+        margin-left: 0;
+    }
+
+    .ul1
+    {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #one,
+    #two,
+    #three
+    {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #nine
+    {
+        margin-right: 0;
+    }
+
+    .ten
+    {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+
+     <div class="food">
+         <nav>
+       <ul class="ul">
+       <img id="chinese" src="logo.webp" alt="">
+         <li id="li"><a id="a" href="index.html">Home</a></li>
+         <li id="li"><a id="a" href="menu.html">Our Menu</a></li>
+         <li id="li"><a id="a" href="about.html">About Us</a></li>
+         <li id="li"><a id="a" href="Testimonials.html">Testimonials</a></li>
+         <li id="li"><a id="a" href="contact.html">Contact us</a></li>
+         <i class="fa-solid fa-magnifying-glass"></i>
+       </ul> 
+
+       <div class="hamburger" onclick="toggleMenu()">
+         <i class="fa-solid fa-bars"></i>
+       </div>
+
+    </nav>
+    <hr>
+    <h1 id="h1">Testimonials</h1>
+    </div>
+
+
+    
+<div class="title">
+
+
+<div class="heading">
+  <div class="bowl">
+    <img src="bowl.jpeg" alt="">
+   </div>
+   <div class="card">
+   <p id="p5">SPECIALS CHOICE</p>
+   <h1 id="h8">A Taste of China, Right Here in Perth</h1>
+   </div>
+</div>
+
+
+<div class="box">
+
+
+  <div id="box1">
+    <div class="rating">
+  <input type="radio" id="star5" name="rating" value="5" />
+  <label for="star5"></label>
+  <input type="radio" id="star4" name="rating" value="4" />
+  <label for="star4"></label>
+  <input type="radio" id="star3" name="rating" value="3" />
+  <label for="star3"></label>
+  <input type="radio" id="star2" name="rating" value="2" />
+  <label for="star2"></label>
+  <input type="radio" id="star1" name="rating" value="1" />
+  <label for="star1"></label>
+</div>
+<h3 id="h9">"They truly care about our needs!"</h3>
+<p id="p6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took.</p>
+<p id="p7">Anna Helix M.</p>
+<p class="opacity">Verified User</p>
+<img class="women" src="womwn.webp" alt="">
+  </div>
+
+
+  <div id="box2">
+    <div class="rating">
+  <input type="radio" id="star5" name="rating" value="5" />
+  <label for="star5"></label>
+  <input type="radio" id="star4" name="rating" value="4" />
+  <label for="star4"></label>
+  <input type="radio" id="star3" name="rating" value="3" />
+  <label for="star3"></label>
+  <input type="radio" id="star2" name="rating" value="2" />
+  <label for="star2"></label>
+  <input type="radio" id="star1" name="rating" value="1" />
+  <label for="star1"></label>
+</div>
+<h3 id="h9">"They truly care about our needs!"</h3>
+<p id="p6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took.</p>
+<p id="p7">Anna Helix M.</p>
+<p class="opacity">Verified User</p>
+<img class="women" src="womwn.webp" alt="">
+  </div>
+
+
+  <div id="box3">
+    <div class="rating">
+  <input type="radio" id="star5" name="rating" value="5" />
+  <label for="star5"></label>
+  <input type="radio" id="star4" name="rating" value="4" />
+  <label for="star4"></label>
+  <input type="radio" id="star3" name="rating" value="3" />
+  <label for="star3"></label>
+  <input type="radio" id="star2" name="rating" value="2" />
+  <label for="star2"></label>
+  <input type="radio" id="star1" name="rating" value="1" />
+  <label for="star1"></label>
+</div>
+<h3 id="h9">"They truly care about our needs!"</h3>
+<p id="p6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took.</p>
+<p id="p7">Anna Helix M.</p>
+<p class="opacity">Verified User</p>
+<img class="women" src="women1.webp" alt="">
+  </div>
+
+
+</div>
+
+
+ <img id="bowl1" src="bowl1.webp" alt="">
+
+</div>
+
+
+<div class="black">
+
+  <div id="hero"><img class="hero1" src="logo.webp" alt=""></div>
+
+  <div class="main-footer">
+  
+   <div class="footer">
+    <h3 id="h10">Follow Us On</h3>
+    <i id="i" class="fa-brands fa-facebook-f"></i>
+    <i id="i" class="fa-brands fa-twitter"></i>
+    <i id="i" class="fa-brands fa-instagram"></i>
+    <i id="i" class="fa-brands fa-linkedin-in"></i>
+   </div>
+
+   <div class="footer1">
+      <h3 id="h11">Quick Links</h3>
+      <ul class="ul1">
+        <li id="li1"><a id="a1" href="index.html">Home</a></li>
+        <li id="li1"><a id="a1" href="menu.html">Menu</a></li>
+        <li id="li1"><a id="a1" href="about.html">About Us</a></li>
+        <li id="li1"><a id="a1" href="Testimonials.html">Testimonials</a></li>
+      </ul>
+    </div>
+
+
+   <div class="footer2">
+    <h3 id="h12">Other Links</h3>
+      <ul class="ul1">
+        <li id="li1"><a id="a1" href="contact.html">Contact Us</a></li>
+        <li id="li1"><a id="a1" href="menu.html">Privacy Policy</a></li>
+        <li id="li1"><a id="a1" href="menu.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer3">
+
+      <h3 id="h13">Contact Info</h3>
+
+      <div id="one">
+      <i id="i2" class="fa-solid fa-location-dot"></i>
+      <p id="four">1/16 GARDEN BOULEVARD, DINGLEY 3172</p>
+      </div>
+
+      <div id="two">
+      <i id="i2" class="fa-solid fa-envelope"></i>
+      <p id="four">patriciang2011@hotmail.com</p>
+      </div>
+
+      <div id="three">
+      <i id="i2" class="fa-solid fa-phone"></i>
+        <p id="four">+0395515643</p>
+        <p id="four">+0420871288</p>
+      </div>
+
+    </div>
+    </div>
+
+<hr>
+
+<div class="ten">
+<p id="nine">© 2025 Redwood Gardens Chinese Restaurant . All rights reserved.</p>
+<p id="ten">Powered by: Synergy Spark Agency</p>
+</div>
+
+</div>
+
+<script>
+function toggleMenu()
+{
+    document.querySelector(".ul").classList.toggle("active");
+}
+</script>
+
+    
+</body>
+</html>
